@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0 0.4rem;
+}
+
+.nav__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.25rem;
+}
+
+.nav__search > a {
+  color: white !important;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+}
+
+.nav > div {
+  margin: 0.4rem 0;
+}
+

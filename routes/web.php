@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->middleware('verified')->name('home');
+
+Route::middleware([])->group(function () {
+});
+
+Route::get('/post', 'PostController@index')->middleware('auth');
+
+Route::get('/{name}', 'HomeController@profile');
